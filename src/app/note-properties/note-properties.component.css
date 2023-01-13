@@ -1,0 +1,14 @@
+#card-viewer {
+    margin: 40px auto;
+    width: 40%;
+}
+.card-content{
+    text-align: center;
+    margin: auto;
+    padding: 12px;
+    width: fit-content;
+}
+#edit-form{
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,12 @@
+#message {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    text-align: center;
+    margin: auto;
+    margin-top: 40px;
+}
+
+a {
+    color: #c2185b;
+}

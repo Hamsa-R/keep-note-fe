@@ -1,0 +1,12 @@
+
+<div id="search">
+    <app-search (searchNoteChanged)="onSearchNote($event)" [note]="notes"></app-search>
+</div>
+<div id="displayNotes">
+    <app-note [notes]="notes"></app-note>
+</div>
+
+
+<button mat-fab color="primary" class="addButton" (click)="openDialog()">
+    <mat-icon mat-icon-button type="button">add</mat-icon>
+</button>

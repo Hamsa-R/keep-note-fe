@@ -1,0 +1,51 @@
+{
+  "notes": [
+    {
+      "id": 1,
+      "title": "sample-note",
+      "content": "This is a sample note added for testing purpose",
+      "reminderDate": "2022-09-09T18:30:00.000Z",
+      "category": "Office",
+      "priority": "Low"
+    },
+    {
+      "id": 2,
+      "title": "practice-exercise: typescript",
+      "content": "solution development progress - exercise 1 solution ready, exercise 2 solution to be started yes",
+      "reminderDate": "2022-10-09T18:30:00.000Z",
+      "category": "Office",
+      "priority": "Medium"
+    },
+    {
+      "id": 3,
+      "title": "challenge: typescript",
+      "content": "solution developed, need to submit for evaluation",
+      "reminderDate": "2022-09-09T18:30:00.000Z",
+      "category": "Office",
+      "priority": "Low"
+    },
+    {
+      "id": 4,
+      "title": "practice-exercise: typescript",
+      "content": "solution reviewed, refactoring in progress",
+      "reminderDate": "2022-09-11T18:30:00.000Z",
+      "category": "Review",
+      "priority": "High"
+    },
+    {
+      "title": "Review Meeting",
+      "content": "Documentation of project should be completed before review meeting",
+      "reminderDate": "2022-12-07T18:30:00.000Z",
+      "category": "Office",
+      "priority": "Critical",
+      "id": 6
+    },
+    {
+      "title": "DOM In Js",
+      "content": "The DOM (Document Object Model) is an interface that represents how your HTML and XML documents are read by the browser. It allows a language (JavaScript) to manipulate, structure, and style your website.",
+      "reminderDate": "2023-01-26T18:30:00.000Z",
+      "category": "new",
+      "id": 7
+    }
+  ]
+}

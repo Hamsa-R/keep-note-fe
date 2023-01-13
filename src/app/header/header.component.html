@@ -1,0 +1,19 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+    <!-- <div id="title-block">
+    <h2>Keep Note</h2>
+    </div> -->
+    <span>Keep Note</span>
+    <span class="example-spacer"></span>
+    <div id="navbar">
+        <a routerLink="../home">
+        <mat-icon id="icon" aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon></a>
+        <mat-icon *ngIf="loggedIn!==true" matTooltip="login" routerLink="login">login</mat-icon>
+        <mat-icon *ngIf="loggedIn===true" matTooltip="logout" (click)="logout()">logout</mat-icon>
+        <mat-icon id="icon" aria-hidden="false" aria-label="Example apps icon" fontIcon="apps"></mat-icon>
+        <mat-icon id="icon" aria-hidden="false" aria-label="Example settings icon" fontIcon="settings"></mat-icon>
+    
+    </div>
+</mat-toolbar-row>
+</mat-toolbar>
+<router-outlet (activate)="onLoggedIn($event)"></router-outlet>

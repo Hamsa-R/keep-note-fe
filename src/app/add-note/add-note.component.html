@@ -1,0 +1,75 @@
+
+<div id="addNotes">
+    <h4>Add New Note</h4>
+    <form #addForm="ngForm">
+        <!-- (ngSubmit)="onSubmit(addForm)" -->
+        <!-- <mat-form-field class="input-field" appearance="legacy">
+        <input mat-input type="text" required placeholder="Note Id" [(ngModel)]="note.id" #noteId="ngModel">
+        <div *ngIf="noteId?.invalid && (noteId?.dirty || noteId?.touched)">
+            <div *ngIf="noteId.errors?.['required']">
+                Id is required
+            </div>
+        </div>
+    </mat-form-field> -->
+        <br>
+        <mat-form-field class="input-field" appearance="legacy">
+            <input matInput name="noteTitle" required [(ngModel)]="note.title" type="text" #title="ngModel"
+                placeholder="Enter Title">
+            <div *ngIf="title?.invalid && (title?.dirty || title?.touched)">
+                <div *ngIf="title.errors?.['required']">
+                    Title is required
+                </div>
+            </div>
+        </mat-form-field><br>
+        <mat-form-field class="input-field" appearance="legacy">
+            <input matInput name="noteContent" #content="ngModel" [(ngModel)]="note.content" type="text"
+                placeholder="Enter Content" required minlength="5">
+            <div *ngIf="!content?.valid && (content?.dirty || content?.touched)">
+                <div *ngIf="content.errors?.['required']">
+                    Note Content is required
+                </div>
+            </div>
+            <div class="invalid" *ngIf="content.errors?.['minlength']">
+                Last Name Minimum Length is {{content.errors?.['minlength']?.requiredLength}}
+            </div>
+        </mat-form-field>
+        <br>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Reminder Date</mat-label>
+            <input matInput [matDatepicker]="picker" name="noteReminderDate" #reminderDate=ngModel
+                [(ngModel)]="note.reminderDate" required>
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            <div *ngIf="!reminderDate?.valid && (reminderDate?.dirty || reminderDate?.touched)">
+                <div *ngIf="reminderDate.errors?.['required']">
+                    Note Reminder Date is required
+                </div>
+            </div>
+        </mat-form-field>
+        <br>
+        <mat-form-field class="input-field" appearance="legacy">
+            <input matInput required name="noteCategory" #category=ngModel [(ngModel)]="note.category" type="text"
+                placeholder="Enter Category">
+            <mat-chip color="accent"><mat-basic-chip>
+                    {{note.category}}
+                </mat-basic-chip>
+            </mat-chip>
+
+        </mat-form-field>
+
+        <div>
+            <mat-radio-group aria-label="Select an option">Priority
+                <mat-radio-button value="Low">Low</mat-radio-button>
+                <mat-radio-button value="Medium">Medium</mat-radio-button>
+                <mat-radio-button value="High">High</mat-radio-button>
+                <mat-radio-button value="Critical">Critical</mat-radio-button>
+            </mat-radio-group>
+        </div>
+
+        <button mat-fab [mat-dialog-close]="note" color="primary">
+            <mat-icon>save</mat-icon>
+        </button>
+    </form>
+</div>

@@ -1,0 +1,26 @@
+<mat-card mat-ripple [matRippleCentered]="true" class="card-content" id="card-viewer">
+    <mat-card-content>
+        <h2>{{note.title}}</h2>
+        {{note.content}}<br>
+        Category : 
+        {{note.category}}
+        <form id="edit-form">
+            <mat-form-field class="input-field" appearance="fill">
+                <mat-label>content</mat-label>
+                <input matInput [(ngModel)]="note.content" name="price" type="text" >
+            </mat-form-field><br>
+            <mat-form-field class="input-field" appearance="legacy">
+                <mat-label>category</mat-label>
+                <input matInput [(ngModel)]="note.category" name="unit" type="text" >
+            </mat-form-field>
+        </form>
+    </mat-card-content>
+    <mat-card-actions>
+        <button color="accent" mat-icon-button (click)="editNote()">
+            <mat-icon>edit</mat-icon>
+        </button>
+        <button color="accent" mat-icon-button (click)="deleteNote()">
+            <mat-icon>delete</mat-icon>
+        </button>
+    </mat-card-actions>
+</mat-card>

@@ -1,0 +1,21 @@
+{
+    "users": [
+      {
+        "firstName": "Test",
+        "lastName": "User",
+        "email": "testuser@gmail.com",
+        "password": "123456",
+        "confirmPassword": "123456",
+        "gender": "male",
+        "age": "22",
+        "phone": "8889997776",
+        "address": {
+          "street": "Kannadasan Road",
+          "city": "chennai",
+          "state": "TamilNadu",
+          "zipCode": "600017"
+        },
+        "id": 26
+      }
+    ]
+  }

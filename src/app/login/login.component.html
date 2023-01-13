@@ -1,0 +1,23 @@
+<div id="whole">
+    <div id="form">
+        <form (ngSubmit)="validateUserCode()" [formGroup]="loginForm">
+            <div>
+                <mat-form-field  appearance="legacy">
+                    <mat-label>Enter User Id</mat-label>
+                    <input type="text"  matInput name="userId" placeholder="User Id" formControlName="userId">
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field appearance="legacy">
+                    <mat-label>Enter password</mat-label>
+                    <input type="text"  matInput name="password" placeholder="password" formControlName="password">
+                </mat-form-field>
+            </div>
+            <button type="submit" mat-raised-button color="primary">Login</button>
+        </form><br>
+        
+        <!-- <div>
+            <a a routerLink="/registration">New User Click here to register</a>
+        </div> -->
+    </div>
+</div>

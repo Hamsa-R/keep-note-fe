@@ -1,0 +1,7 @@
+div{
+    display: flex; 
+    justify-content: center; 
+}
+.example-full-width {
+    width: 100%;
+}

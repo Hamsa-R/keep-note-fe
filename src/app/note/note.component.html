@@ -1,0 +1,21 @@
+<div id="card">
+  <div *ngFor="let note of notes">
+    <div class="cardDisplay">
+      <a routerLink="../note-properties/{{note?.id}}">
+        <mat-card mat-ripple [matRippleCentered]="true" class="card-content">
+          <mat-card-title>{{note?.title}}</mat-card-title>
+          <mat-icon *ngIf="note.priority==='Critical'" color="warn">gpp_maybe</mat-icon>
+          <mat-icon *ngIf="note.priority==='High'" color="warn">arrow_circle_up</mat-icon>
+          <mat-icon *ngIf="note.priority==='Medium'" color="primary">remove_circle_outline</mat-icon>
+          <mat-icon *ngIf="note.priority==='Low'" color="primary">arrow_circle_down</mat-icon>
+          <mat-card-subtitle>{{note?.reminderDate}}</mat-card-subtitle>
+          <mat-card-content>{{note?.content}}</mat-card-content>
+          <mat-chip><mat-basic-chip>
+              {{note.category}}
+            </mat-basic-chip>
+          </mat-chip>
+        </mat-card>
+      </a>
+    </div>
+  </div>
+</div>
